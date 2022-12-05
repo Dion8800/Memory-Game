@@ -1,0 +1,236 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    border: none;
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(229.29deg, #F1E0CE -33.1%, #5F55CF -1.55%, #95B8E0 97.47%);    
+    height: 100vh;
+    background-image: url(imgs/brain.png);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 24px 52px;
+    justify-content: space-between;
+
+}
+
+.logo {
+    max-width: 200px;
+    width: 100%;
+}
+
+
+#intro {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 62, 112, 0.397);
+    backdrop-filter: blur(24.5px);
+    z-index: 2;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-btn {
+    display: flex;
+    background-color: #0066FF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    padding: 20px 52px;
+    border-radius: 20px;
+}
+
+
+
+h1 {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 29px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+header button {
+    border-radius: 106px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    color: white;
+    transition: 0.3s;
+    padding: 16px 20px;
+    background-color: #0066FF;
+
+}
+
+header button:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em #0066FF;
+    transform: translateY(-0.25em);
+}
+
+.component-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    row-gap: 32px;
+    max-width: 980px;
+    margin: auto;
+    margin-top: 64px;
+    padding: 0 40px;
+
+}
+
+.component {
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 0px 17px -6px rgba(0, 0, 0, 0.25), inset 0px 0px 80px -20px #00020602;
+    width: 100%;
+    height: 150px;
+transition: 0.3s;
+
+}
+
+.component-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+
+.component-inner div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+   
+
+}
+
+.component-inner div:nth-child(1) {
+    background-image: url(imgs/card-bg.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 17px -6px rgba(0, 0, 0, 0.25), inset 0px 0px 80px -20px #000206;
+}
+
+.component-inner div:nth-child(2) {
+    background-color: #f9fafb71;
+    backdrop-filter: blur(12px);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.component-inner div:nth-child(2) img {
+    z-index: 1;
+    width: 100%;
+    max-width: 120px;
+
+}
+
+
+
+
+@media only screen and (max-width:800px) {
+
+    header {
+        padding: 20px 32px;
+    }
+    .component {
+        height: 90px;
+    }
+
+    body {
+
+        background-image: url(imgs/brain-2.png);
+        background-position: bottom;
+    }
+  
+}
+
+
+@media only screen and (max-width:600px) {
+
+
+    header {
+        padding: 20px 24px;
+    }
+
+    header button {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+    .play-btn {
+   
+        font-size: 18px;
+        line-height: 20px;
+        color: #FFFFFF;
+        padding: 16px 32px;
+
+    }
+    .component-container {
+        margin-top: 120px;
+        gap: 16px;
+        row-gap: 20px;
+        padding: 0 24px;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }
+
+    .component {
+        height: 72px;
+        border-radius: 4px;
+    }
+   
+    h1 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .component-inner div:nth-child(2) img {
+        z-index: 1;
+        max-width: 70px;
+    }
+}
